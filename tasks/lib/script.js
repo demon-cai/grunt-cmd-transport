@@ -85,7 +85,7 @@ exports.init = function(grunt) {
         if (typeof dep !== 'string') {
           dep = fn ? fn(dep) : dep.id;
         }
-        return dep.replace(/\.js$/, '');
+        return unixy(dep.replace(/\.js$/, ''));
       });
     }
 
